@@ -1,0 +1,197 @@
+/* Variables for consistency */
+:root {
+    --bg-mint: #d4fcd4;
+    --accent-green: #9df29d;
+    --dark: #1a1a1a;
+    --white: #ffffff;
+    --gray: #8e8e8e;
+}
+
+body {
+    background-color: var(--bg-mint);
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    color: var(--dark);
+    margin: 0;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+/* Container responsive limits */
+.dashboard-wrapper {
+    width: 100%;
+    max-width: 420px;
+}
+
+/* Header */
+.header-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+}
+
+.logo-circle {
+    width: 48px;
+    height: 48px;
+    background: var(--dark);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.menu-btn {
+    background: var(--white);
+    border: none;
+    border-radius: 12px;
+    padding: 10px 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.03);
+}
+
+/* Typography */
+.main-title {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+/* Balance */
+.balance-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 35px;
+}
+
+.balance-amount {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+.label {
+    color: var(--gray);
+    font-weight: 500;
+}
+
+.action-overlap {
+    display: flex;
+}
+
+.circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+.link-btn { background: var(--accent-green); z-index: 2; }
+.stats-btn { background: var(--white); margin-left: -18px; z-index: 1; }
+
+/* Cards */
+.bento-card {
+    background: var(--white);
+    border-radius: 28px;
+    padding: 30px 15px;
+    text-align: center;
+    text-decoration: none;
+    color: var(--dark);
+    display: block;
+    transition: transform 0.2s ease;
+}
+
+.bento-card:hover {
+    transform: translateY(-5px);
+    color: var(--dark);
+}
+
+.bento-card i {
+    font-size: 2rem;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.bento-card span {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+/* Transaction Panel */
+.transaction-panel {
+    background: var(--white);
+    border-radius: 40px;
+    padding: 30px;
+    margin-top: 25px;
+}
+
+.month-selector {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.month {
+    color: #ccc;
+    font-weight: 600;
+}
+
+.month.active {
+    color: var(--dark);
+    position: relative;
+}
+
+.month.active::after {
+    content: "•";
+    position: absolute;
+    bottom: -15px;
+    left: 45%;
+}
+
+.transaction-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.count {
+    font-size: 4rem;
+    font-weight: 700;
+    margin: 5px 0;
+}
+
+.card-number {
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: right;
+}
+
+/* Avatars */
+.avatar-group {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 3px solid var(--white);
+    margin-left: -12px;
+    object-fit: cover;
+}
+
+.avatar.more {
+    background: var(--accent-green);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+    font-size: 0.8rem;
+}
