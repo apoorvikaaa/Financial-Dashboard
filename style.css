@@ -45,11 +45,16 @@ body {
 .menu-btn {
     background: var(--white);
     border: none;
-    border-radius: 12px;
-    padding: 10px 12px;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    padding: 8px 12px;
+    margin-right: 20px;
     box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
-
+.bi-grid{
+    font-size: 1.3rem;
+}
 /* Typography */
 .main-title {
     font-size: 3rem;
@@ -74,7 +79,8 @@ body {
 
 .label {
     color: var(--gray);
-    font-weight: 500;
+    font-weight: 700;
+    font-size: 1.2rem;
 }
 
 .action-overlap {
@@ -82,8 +88,8 @@ body {
 }
 
 .circle {
-    width: 60px;
-    height: 60px;
+    width: 70px;
+    height: 70px;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -91,9 +97,11 @@ body {
     font-size: 1.5rem;
     cursor: pointer;
 }
-
-.link-btn { background: var(--accent-green); z-index: 2; }
-.stats-btn { background: var(--white); margin-left: -18px; z-index: 1; }
+.small-letter{
+    font-size: 2rem;
+}
+.link-btn { background: var(--accent-green); z-index: 2; font-size: 2rem; }
+.stats-btn { background: var(--white); margin-left: -18px; z-index: 1;font-size: 1.8rem; }
 
 /* Cards */
 .bento-card {
@@ -138,37 +146,60 @@ body {
 }
 
 .month {
-    color: #ccc;
+    color: #000;
     font-weight: 600;
+    font-size: 1.2rem;
 }
-
+.gradient-fade-left{
+    background: linear-gradient(to left, black 0%, transparent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-fade-right{
+    background: linear-gradient(to right, black 0%, transparent 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
 .month.active {
     color: var(--dark);
     position: relative;
 }
 
-.month.active::after {
-    content: "•";
-    position: absolute;
-    bottom: -15px;
-    left: 45%;
+.bi-record-circle{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 8px;
+    font-size: 0.7rem;
 }
-
 .transaction-details {
     display: flex;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     align-items: flex-end;
 }
-
+.transac{
+    display: flex;
+    gap: 70px;
+    flex-wrap: nowrap;
+    white-space: nowrap;
+    color: #000;
+}
+.transaction{
+    color: #000;
+    font-size: large;
+    font-weight: 700;
+}
 .count {
     font-size: 4rem;
     font-weight: 700;
     margin: 5px 0;
 }
-
+.sub-label{
+    font-size: large;
+}
 .card-number {
     font-weight: 700;
-    margin-bottom: 15px;
     text-align: right;
 }
 
@@ -176,6 +207,7 @@ body {
 .avatar-group {
     display: flex;
     flex-direction: row-reverse;
+    margin-right: 0px;
 }
 
 .avatar {
